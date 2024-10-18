@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='complex_sql_tool',
-    version='1.0',
+    version='1.0.1',
     packages=find_packages(),
     install_requires=[
         'black>=23.3.0',
@@ -20,11 +20,11 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'complex_sql_tool=main:main',
+            'complex_sql_tool=main',
         ],
     },
     author='Hongji',
-    description='A complex SQL tool for managing product and sales tables.',
+    description='A toy tool for IDS706 to run complex SQL with external MYSQL database.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/nogibjj/IDS706_package_python_CLI',

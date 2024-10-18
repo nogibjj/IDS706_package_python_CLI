@@ -1,12 +1,9 @@
 # IDS706_complex_sql_hx84
-![CI](https://github.com/nogibjj/IDS706_complex_sql_hx84/actions/workflows/CICD.yml/badge.svg)
-
-# Requirements
-
-* Design a complex SQL query involving joins, aggregation, and sorting
-* Provide an explanation for what the query is doing and the expected results
+![CI](https://github.com/nogibjj/IDS706_package_python_CLI/actions/workflows/CICD.yml/badge.svg)
 
 # Overview
+
+You can find this tool [here](https://pypi.org/project/complex-sql-tool/1.0.1/)
 
 ## Objective
 
@@ -40,6 +37,29 @@ Implement an ETL (Extract, Transform, Load) process for the Adult dataset, split
 │   ├── query1.sql
 │   └── query2.sql
 └── test_main.py
+```
+
+# Installation
+
+To install the Complex SQL Tool, use `pip`:
+
+```bash
+pip install complex_sql_tool
+```
+
+# Usage
+After installing, you can use the tool with the following command:
+
+```bash
+complex_sql_tool --help
+```
+
+## Examples
+
+```bash
+complex_sql_tool extract
+complex_sql_tool load
+complex_sql_tool query
 ```
 
 # SQL query
@@ -130,7 +150,7 @@ ORDER BY
 
 ## Database in MYSQL
 
-![image1](./img/database.png)
+![image1](https://github.com/nogibjj/IDS706_package_python_CLI/img/database.png)
 
 ## Query Results
 
@@ -201,4 +221,4 @@ ORDER BY
 
 ## Test
 
-![image1](./img/test.png)
+![image2](https://github.com/nogibjj/IDS706_package_python_CLI/img/test.png)
