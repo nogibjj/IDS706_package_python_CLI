@@ -3,7 +3,7 @@
 
 # Overview
 
-You can find this tool [here](https://pypi.org/project/complex-sql-tool/1.0.2/)
+You can find this tool [here](https://pypi.org/project/complex-sql-tool/1.0.4/)
 
 ## Objective
 
@@ -23,11 +23,11 @@ Implement an ETL (Extract, Transform, Load) process for the Adult dataset, split
 │   ├── database.png
 │   └── test.png
 ├── LICENSE
-├── main.py
 ├── Makefile
 ├── mylib
 │   ├── extract.py
 │   ├── __init__.py
+│   ├── main.py
 │   ├── query.py
 │   └── transform_load.py
 ├── README.md

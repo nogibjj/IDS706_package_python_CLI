@@ -14,17 +14,17 @@ test:
 	python -m pytest -vv .
 
 extract:
-	python main.py extract 
+	python mylib/main.py extract 
 
 load:
-	python main.py load
+	python mylib/main.py load
 
 query:
-	python main.py query --query-name query1
-	python main.py query --query-name query2
+	python mylib/main.py query --query-name query1
+	python mylib/main.py query --query-name query2
 	
 etl:
-	python main.py extract 
-	python main.py load
-	python main.py query --query-name query1
-	python main.py query --query-name query2
+	python mylib/main.py extract 
+	python mylib/main.py load
+	python mylib/main.py query --query-name query1
+	python mylib/main.py query --query-name query2
