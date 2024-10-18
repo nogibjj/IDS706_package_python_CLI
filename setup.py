@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='complex_sql_tool',
-    version='1.0.1',
+    version='1.0.2',
     packages=find_packages(),
     install_requires=[
         'black>=23.3.0',
@@ -20,7 +20,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'complex_sql_tool=main',
+            'complex_sql_tool=main:main',
         ],
     },
     author='Hongji',

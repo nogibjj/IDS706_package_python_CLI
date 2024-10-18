@@ -3,7 +3,7 @@
 
 # Overview
 
-You can find this tool [here](https://pypi.org/project/complex-sql-tool/1.0.1/)
+You can find this tool [here](https://pypi.org/project/complex-sql-tool/1.0.2/)
 
 ## Objective
 
