@@ -6,12 +6,18 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-permissions:                    # Global permissions configuration starts here
-  contents: write                # 'read' access to repository contents
-  pull-requests: write          # 'write' access to pull requests
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: # Set environment variables globally
+      DB_USER: ${{ secrets.DB_USER }}
+      DB_PASS: ${{ secrets.DB_PASS }}
+      DB_HOST: ${{ secrets.DB_HOST }}
+      DB_NAME: ${{ secrets.DB_NAME }}
     steps:
     - uses: actions/checkout@v4
       with:
@@ -21,33 +27,27 @@ jobs:
     - name: Install
       run: |
         make install
+
     - name: Format
       run: |
         make format
+
     - name: Lint
       run: |
         make lint
+
     - name: Test
       run: |
-        export DB_USER=${{ secrets.DB_USER }}
-        export DB_PASS=${{ secrets.DB_PASS }}
-        export DB_HOST=${{ secrets.DB_HOST }}
-        export DB_NAME=${{ secrets.DB_NAME }}
         make test
+
     - name: extract
       run: |
         make extract
+
     - name: load
       run: |
-        export DB_USER=${{ secrets.DB_USER }}
-        export DB_PASS=${{ secrets.DB_PASS }}
-        export DB_HOST=${{ secrets.DB_HOST }}
-        export DB_NAME=${{ secrets.DB_NAME }}
         make load
+
     - name: query
       run: |
-        export DB_USER=${{ secrets.DB_USER }}
-        export DB_PASS=${{ secrets.DB_PASS }}
-        export DB_HOST=${{ secrets.DB_HOST }}
-        export DB_NAME=${{ secrets.DB_NAME }}
         make query
