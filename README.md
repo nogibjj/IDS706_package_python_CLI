@@ -1,5 +1,5 @@
-# IDS706_complex_sql_hx84
-![CI](https://github.com/nogibjj/IDS706_package_python_CLI/actions/workflows/CICD.yml/badge.svg)
+# IDS706_package_python_CLI
+![CI/CD](https://github.com/nogibjj/IDS706_package_python_CLI/actions/workflows/CICD.yaml/badge.svg)
 
 # Overview
 
