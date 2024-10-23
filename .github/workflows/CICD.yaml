@@ -1,0 +1,46 @@
+name: CI/CD
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:                    # Global permissions configuration starts here
+  contents: write                # 'read' access to repository contents
+  pull-requests: write          # 'write' access to pull requests
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+    - name: Set environment variables
+      run: |
+        echo "DB_USER=${{ secrets.DB_USER }}" >> $GITHUB_ENV
+        echo "DB_PASS=${{ secrets.DB_PASS }}" >> $GITHUB_ENV
+        echo "DB_HOST=${{ secrets.DB_HOST }}" >> $GITHUB_ENV
+        echo "DB_NAME=${{ secrets.DB_NAME }}" >> $GITHUB_ENV
+    - name: Install
+      run: |
+        make install
+    - name: Format
+      run: |
+        make format
+    - name: Lint
+      run: |
+        make lint
+    - name: Test
+      run: |
+        make test
+    - name: extract
+      run: |
+        make extract
+    - name: load
+      run: |
+        make load
+    - name: query
+      run: |
+        make query

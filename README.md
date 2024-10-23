@@ -56,12 +56,23 @@ complex_sql_tool --help
 
 ## Examples
 
+Before using this tool, you need to mannully export DB_HOST, DB_USER, DB_PASS, DB_NAME.
+
 ```bash
+export DB_HOST=<your_host_name>
+export DB_USER=<your_user_name>
+export DB_PASS=<your_password>
+export DB_NAME=<your_database_name>
 complex_sql_tool extract
 complex_sql_tool load
-complex_sql_tool query
+complex_sql_tool query --query-name query1
+complex_sql_tool query --query-name query2
 ```
 
+### Documentation
+![load](https://github.com/nogibjj/IDS706_package_python_CLI/img/load.png)
+![query1](https://github.com/nogibjj/IDS706_package_python_CLI/img/query1.png)
+![query2](https://github.com/nogibjj/IDS706_package_python_CLI/img/query2.png)
 # SQL query
 
 ## Create Table

@@ -2,7 +2,8 @@ all: install format lint test
 
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -r requirements.txt &&\
+		pip install complex_sql_tool
 
 format:	
 	black . --line-length 100 --verbose
@@ -14,17 +15,11 @@ test:
 	python -m pytest -vv .
 
 extract:
-	python mylib/main.py extract 
+	complex_sql_tool extract
 
 load:
-	python mylib/main.py load
+	complex_sql_tool load
 
 query:
-	python mylib/main.py query --query-name query1
-	python mylib/main.py query --query-name query2
-	
-etl:
-	python mylib/main.py extract 
-	python mylib/main.py load
-	python mylib/main.py query --query-name query1
-	python mylib/main.py query --query-name query2
+	complex_sql_tool query --query-name query1
+	complex_sql_tool query --query-name query2
