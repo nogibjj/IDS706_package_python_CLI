@@ -70,9 +70,9 @@ complex_sql_tool query --query-name query2
 ```
 
 ### Documentation
-![load](https://github.com/nogibjj/IDS706_package_python_CLI/img/load.png)
-![query1](https://github.com/nogibjj/IDS706_package_python_CLI/img/query1.png)
-![query2](https://github.com/nogibjj/IDS706_package_python_CLI/img/query2.png)
+![load](img/load.png)
+![query1](img/query1.png)
+![query2](img/query2.png)
 # SQL query
 
 ## Create Table
@@ -161,7 +161,7 @@ ORDER BY
 
 ## Database in MYSQL
 
-![image1](https://github.com/nogibjj/IDS706_package_python_CLI/img/database.png)
+![image1](img/database.png)
 
 ## Query Results
 
@@ -232,4 +232,4 @@ ORDER BY
 
 ## Test
 
-![image2](https://github.com/nogibjj/IDS706_package_python_CLI/img/test.png)
+![image2](img/test.png)
